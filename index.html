@@ -2,101 +2,106 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
 
-  <!-- 头部区域 -->
-  <header>
-    <h1>数据可视化-Echarts</h1>
-    <div class="showTime"></div>
-  </header>
+    <!-- 头部区域 -->
+    <header>
+        <h1>数据可视化-Echarts</h1>
+        <div class="showTime"></div>
+    </header>
 
-  <!-- 表格区域 -->
-  <section id="mainbox">
-    <div class="column">
-      <div class="panel bar">
-        <h2>柱形图</h2>
-        <div class="chart"></div>
-        <div class="panel-footer"></div>
-      </div>
-      <div class="panel line">
-        <h2>折线图 <a href="javascript:;">2020</a><a href="javascript:;">2021</a></h2>
-        <div class="chart"></div>
-        <div class="panel-footer"></div>
-      </div>
-      <div class="panel bar">
-        <div class="panel-footer"></div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="no">
-        <div class="no-hd">
-          <ul>
-            <li>123</li>
-            <li>2456</li>
-          </ul>
+    <!-- 表格区域 -->
+    <section id="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱形图</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图 <a href="javascript:;">2020</a><a href="javascript:;">2021</a></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
         </div>
-        <div class="no-bd">
-          <ul>
-            <li>当前需求人数</li>
-            <li>市场供应人数</li>
-          </ul>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>123</li>
+                        <li>2456</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>当前需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart">地图模123456块</div>
+            </div>
         </div>
-      </div>
-      <div class="map">
-        <div class="map1"></div>
-        <div class="map2"></div>
-        <div class="map3"></div>
-        <div class="chart">地图模块</div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="panel bar2">
-        <h2>柱形图</h2>
-        <div class="chart"></div>
-        <div class="panel-footer"></div>
-      </div>
-      <div class="panel line2">
-        <h2>折线图</h2>
-        <div class="chart"></div>
-        <div class="panel-footer"></div>
-      </div>
-      <div class="panel bar">
-        <div class="panel-footer"></div>
-      </div>
-    </div>
-  </section>
-  <script>
-    function showTime() {
-      var date = new Date()
-      var y = date.getFullYear()
-      var m = date.getMonth() + 1
-      m = m < 10 ? '0' + m : m
-      var d = date.getDate()
-      d = d < 10 ? '0' + d : d
-      var h = date.getHours()
-      h = h < 10 ? '0' + h : h
-      var m = date.getMinutes()
-      m = m < 10 ? '0' + m : m
-      var s = date.getSeconds()
-      s = s < 10 ? '0' + s : s
+        <div class="column">
+            <div class="panel bar2">
+                <h2>柱形图</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+                <h2>折线图</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie2">
+                <h2>饼形图-2</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showTime() {
+            var date = new Date()
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            m = m < 10 ? '0' + m : m
+            var d = date.getDate()
+            d = d < 10 ? '0' + d : d
+            var h = date.getHours()
+            h = h < 10 ? '0' + h : h
+            var m = date.getMinutes()
+            m = m < 10 ? '0' + m : m
+            var s = date.getSeconds()
+            s = s < 10 ? '0' + s : s
 
-      document.querySelector('.showTime').innerHTML = y + '年' + m + '月' + d + '日 ' + h + ':' + m + ':' + s
+            document.querySelector('.showTime').innerHTML = y + '年' + m + '月' + d + '日 ' + h + ':' + m + ':' + s
 
-    }
-    setInterval(showTime, 1000);
-  </script>
-  <script src="js/flexible.js"></script>
-  <script src="js/echarts.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src='./index.js'></script>
+        }
+        setInterval(showTime, 1000);
+    </script>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/china.js"></script>
+    <script src='./index.js'></script>
 
 </body>
 
